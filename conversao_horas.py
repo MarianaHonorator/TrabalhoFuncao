@@ -1,10 +1,11 @@
-resp = 'S'
+n = 1
 A = 'A.M'
 P = 'P.M'
 
-while resp == 'S':
+while n != 0:
     hora_add = 0
     min_passados = 0
+
 
     def conversao(hora, conversao):
 
@@ -24,16 +25,22 @@ while resp == 'S':
 
 
     hora = int(input("Digite a hora: "))
+
+    if hora < 0:
+        break
+
     min = int(input("Digite o minuto: "))
 
+
+
     if min >= 60:
+
         hora_add = int(min / 60)
         min_passados = min - (60 * hora_add)
         min = min_passados
 
     if hora <= 11:
         periodo = A
-
 
     else:
         periodo = P
@@ -47,7 +54,7 @@ while resp == 'S':
 
     print(resultado(resultado))
 
-    resp = str(input("\nDeseja converter novamente:(S/N):\n")).upper()
+
 
 
 
