@@ -48,10 +48,6 @@ while n != 0:
         periodo = P
 
 
-    if hora == 0:
-        hora_add = 12
-
-
 
     print(resultado(resultado))
 
