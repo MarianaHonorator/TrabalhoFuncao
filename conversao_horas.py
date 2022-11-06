@@ -3,9 +3,6 @@ A = 'A.M'
 P = 'P.M'
 
 while n != 0:
-    hora_add = 0
-    min_passados = 0
-
 
     def conversao(hora, conversao):
 
@@ -24,7 +21,7 @@ while n != 0:
 
     def resultado(resultado):
 
-        resultado = (f"Conversão: \033[7m{conversao(hora, conversao) + hora_add}:{min} {periodo}\033[m")
+        resultado = (f"Conversão: \033[7m{conversao(hora, conversao)}:{min} {periodo}\033[m")
         return resultado
 
 
@@ -33,19 +30,16 @@ while n != 0:
     if hora < 0:
         break
 
-    min = int(input("Digite o minuto: "))
 
-    if min < 0:
+    if hora > 24:
         print("Valor Inválido,Digite novamente!")
         continue
 
+    min = int(input("Digite o minuto: "))
 
-
-    if min >= 60:
-
-        hora_add = int(min / 60)
-        min_passados = min - (60 * hora_add)
-        min = min_passados
+    if min < 0 or min > 59:
+        print("Valor Inválido,Digite novamente!")
+        continue
 
     if hora <= 11:
         periodo = A
@@ -59,11 +53,6 @@ while n != 0:
 
 
 
-
     print(resultado(resultado))
-
-
-
-
 
 
