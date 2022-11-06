@@ -13,6 +13,10 @@ while n != 0:
             conversao = hora
             return conversao
 
+        if hora > 24:
+            conversao = hora - 24
+            return conversao
+
         if hora > 11:
             conversao = (hora + 12) - 24
             return conversao
@@ -30,6 +34,12 @@ while n != 0:
         break
 
     min = int(input("Digite o minuto: "))
+
+    if min < 0:
+        print("Valor Inválido,Digite novamente!")
+        continue
+
+
 
 
 
