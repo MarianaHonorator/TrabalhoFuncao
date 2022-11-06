@@ -41,8 +41,6 @@ while n != 0:
 
 
 
-
-
     if min >= 60:
 
         hora_add = int(min / 60)
